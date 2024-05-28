@@ -1,0 +1,668 @@
+/* profile */
+.full-height {
+  height: 100vh; /* Set chiều cao của hàng (row) bằng 100% chiều cao của màn hình */
+}
+
+.full-height .avatar-container {
+  height: 100%; /* Set chiều cao của container chứa hình ảnh bằng 100% chiều cao của hàng (row) */
+}
+
+.full-height img {
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
+  max-height: 100%; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+}
+.background-container {
+  background-color: tomato;
+}
+.avt {
+  width: 60%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của container */
+  height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+  object-fit: cover;
+  border: 10px solid rgb(255, 135, 87);
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
+  border-radius: 50%; /* Đặt hình ảnh thành hình tròn */
+}
+.avatar-container {
+  text-align: center; /* Căn giữa hình ảnh trong container */
+}
+.navigation-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding-bottom: 50px;
+  z-index: 999; /* Đảm bảo nút hiển thị trên các phần tử khác */
+}
+
+/* Google */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+header {
+  padding: 10px 20px;
+}
+.nav-link {
+  color: rgba(0, 0, 0, 0.87); /* Màu mặc định cho liên kết */
+  text-decoration: none; /* Loại bỏ gạch chân mặc định */
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: underline; /* Hiển thị gạch chân khi di chuột qua */
+}
+
+.nav-link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  border-color: #007bff;
+  width: 100%;
+  height: 90%;
+}
+
+.nav-link-button:hover {
+  background-color: #007bff;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 350px; /* Chiều rộng mong muốn */
+  height: auto; /* Chiều cao sẽ tự điều chỉnh theo tỉ lệ */
+  font-size: 24px;
+  font-weight: bold;
+}
+.search-box {
+  flex: 1;
+  padding-top: 20px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.search-box .icon-left {
+  position: absolute;
+  top: 50%;
+  left: 25%; /* Điều chỉnh để căn chỉnh icon chính xác với input */
+  transform: translateY(-50%);
+  pointer-events: none;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.search-box .iconsearch {
+  width: 20px;
+  height: 20px;
+}
+.search-box .icon-right {
+  position: absolute;
+  top: 50%;
+  left: 65%; /* Khoảng cách từ bên phải của search-box đến biểu tượng */
+  transform: translateY(-50%);
+  pointer-events: none; /* Đảm bảo rằng icon không ảnh hưởng đến việc nhập liệu */
+  padding-top: 20px;
+}
+.search-box .iconsearch-right {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+.search-box input {
+  width: 50%;
+  padding: 8px 20px 8px 40px; /* Khoảng cách bên trong để biểu tượng không đè lên chữ */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước tổng thể */
+}
+
+.grid-container {
+  display: flex;
+  align-items: center; /* Canh chính giữa theo chiều dọc */
+}
+
+.column {
+  flex: 1;
+  padding: 0 20px; /* Để tạo khoảng cách giữa các cột */
+  padding-top: 35px;
+}
+
+.column1 {
+  text-align: right;
+}
+.search-button {
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s; /* Áp dụng hiệu ứng chuyển động */
+}
+
+.search-button:hover {
+  border-color: #acacac;
+  transform: scale(1.05); /* Phóng to nút khi con trỏ chuột đi qua */
+}
+
+.choose-lau {
+  padding-top: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+.choose-lau a {
+  padding-right: 5px;
+  padding-left: 5px;
+  color: #1a0dab;
+  text-decoration: none;
+}
+.choose-lau a:hover {
+  color: #1a0dab;
+  text-decoration: underline; /* Hiển thị gạch chân khi di chuột qua */
+}
+main {
+  padding: 20px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left a,
+.footer-right a {
+  color: rgba(0, 0, 0, 0.87); /* Màu mặc định cho liên kết */
+  text-decoration: none; /* Loại bỏ gạch chân mặc định */
+  margin: 0 10px;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: underline; /* Hiển thị gạch chân khi di chuột qua */
+}
+/* Youtube */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  background-color: #f9f9f9;
+}
+
+.nav-link {
+  color: #000;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.App main {
+  padding: 20px;
+}
+
+/* CSS cho Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.header-left {
+  justify-content: flex-start;
+}
+
+.header-center {
+  justify-content: center;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.Menu,
+.LogoYt {
+  height: 40px;
+  margin-right: 30px;
+}
+
+.Menu img,
+.LogoYt img {
+  height: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  outline-color: #beddff;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 24px; /* Độ rộng mong muốn */
+  height: 24px; /* Chiều cao mong muốn */
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+.search-icon img {
+  width: 100%; /* Đảm bảo hình ảnh lấp đầy không gian của thẻ <span> */
+  height: auto;
+}
+button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 0 20px 20px 0;
+  outline: none;
+  position: relative;
+  margin-left: -5px;
+}
+
+.button-icon {
+
+  width: 24px; /* Độ rộng mong muốn */
+  height: 24px; /* Chiều cao mong muốn */
+  overflow: hidden; /* Ẩn phần vượt ra nếu có */
+}
+
+.button-icon img {
+  padding-right: 20px;
+  width:50px; /* Đảm bảo hình ảnh lấp đầy không gian của thẻ <span> */
+  height:30px; /* Tự động tính toán chiều cao dựa trên tỷ lệ khung hình */
+  
+}
+
+button span {
+  margin-left: 20px;
+}
+
+.search-mic {
+  margin-left: 10px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.search-mic:hover {
+  background-color: #d0d0d0;
+}
+
+.search-mic img {
+  width: 20px;
+  height: auto;
+}
+
+.user-profile {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+
+/* Navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  flex: 1;
+}
+
+.navbar-item {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 10px;
+  background-color: #e9e9e9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-item:hover {
+  background-color: #dddddd;
+  color: #000000;
+}
+
+.navbar-item.selected {
+  background-color: #000000;
+  color: #fff;
+}
+
+.nav-arrow {
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.nav-arrow:hover {
+  background-color: #dcdcdc;
+  border-radius: 50%;
+}
+.nav-arrow.left {
+  margin-right: 10px;
+}
+
+.nav-arrow.right {
+  margin-left: 10px;
+}
+
+.nav-arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+/* CSS cho VideoGrid */
+
+/* .main-content {
+  position: relative;
+  overflow-y: auto;
+  height: 100vh;
+} */
+
+.video-grid-container {
+  width: 100%;
+  padding-right: 20px; /* Để tránh việc thanh cuộn che phủ nội dung */
+}
+
+/* Thiết lập kiểu dáng cho thanh cuộn */
+.video-grid-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.video-grid-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.video-grid-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự động điều chỉnh số cột */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Đặt kích thước tối đa cho grid */
+}
+
+/* CSS cho VideoThumbnail */
+/* .main-content {
+  margin-top: 20px;
+} */
+
+.search-results {
+  max-height: 79vh; /* Điều chỉnh chiều cao tối đa của danh sách */
+  overflow-y: auto; /* Tạo thanh cuộn khi danh sách quá dài */
+}
+
+/* .video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+.video-thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 15px; /* Bo tròn góc video */
+  overflow: hidden; /* Đảm bảo bo tròn góc */
+  width: 100%;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Bo tròn góc video */
+}
+
+.video-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.avatar-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Bo tròn avatar */
+  margin-right: 10px;
+  margin-bottom: 45px;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+}
+.text-info h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #000;
+  font-weight: bold;
+}
+.text-info p {
+  margin: 0;
+  color: #000;
+}
+
+.loading {
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+}
+.info-left{
+  padding-top: 10px;
+}
+.img-fluid{
+  border-radius: 20px;
+}
+.video-info-search-img-name{
+  display: flex;
+}
+.video-info-search-img-name p{
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.avatar-image-search{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.text-info-search{
+  font-size: 12px;
+  color: #817f7f;
+}
+/* CSS cho NavigationButton */
+.navigation-button {
+  background-color: #282828;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navigation-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navigation-button a:hover {
+  text-decoration: underline;
+}
+
+.scrollable-sidebar,
+.sidebar {
+  max-height: 88vh; /* Đặt chiều cao tối đa cho thanh cuộn là 80% chiều cao của trang */
+  overflow-y: auto; /* Cho phép thanh cuộn dọc */
+}
+.video-grid-container {
+  max-height: 75vh; /* Đặt chiều cao tối đa cho thanh cuộn là 80% chiều cao của trang */
+  overflow-y: auto; /* Cho phép thanh cuộn dọc */
+}
+.list-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none; /* Loại bỏ đường viền */
+}
+
+.list-group-item:hover {
+  background-color: #ecf2f4; /* Màu nền khi hover */
+}
+
+.home {
+  width: 20px; /* Điều chỉnh chiều rộng theo nhu cầu */
+  height: auto; /* Duy trì tỷ lệ khung hình */
+  margin-right: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+
+.selected {
+  background-color: #ecf2f4; /* Thay đổi màu nền khi được chọn */
+}
+
+.selected-text {
+  font-weight: bold; /* Làm đậm chữ khi được chọn */
+  color: black; /* Thay đổi màu chữ sang màu đen khi được chọn */
+}
+.text {
+  margin-left: 20px; /* Khoảng cách giữa icon và chữ */
+}
+.text p {
+  color: #6d6d6d;
+}
+.text-info-view-time {
+  display: inline;
+}
+.bottom p {
+  color: #d1cfcf;
+}
+a {
+  text-decoration: none;
+}
+.text-info-view-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-info-view-time p {
+  margin-left: -30px;
+  color: #5d5c5c;
+}
+.text-info-author p{
+  font-size: 14px;
+  color: #838383
+}
+.loadmore{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #838383;
+  width: 100%;
+}
+.video-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Đảm bảo spinner được căn giữa cả theo chiều dọc và ngang */
+}
+
+.video-grid-container {
+  width: 100%; /* Đảm bảo container video rộng 100% */
+  /* Các thuộc tính CSS khác tùy thuộc vào thiết kế của bạn */
+}
+
+.loading-spinner {
+  border: 3px solid #888;
+  border-left-color: #cbcbcb;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 3s linear infinite;
+  margin-top: 20px; /* Khoảng cách phía trên spinner */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
