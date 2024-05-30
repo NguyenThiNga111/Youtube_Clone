@@ -1,0 +1,42 @@
+.search-bar {
+  position: relative;
+}
+
+.search-history {
+  position: absolute;
+  top: 100%; /* Hiển thị phía dưới ô input */
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Màu nền */
+  border: 1px solid #ccc; /* Viền */
+  border-top: none; /* Loại bỏ viền phía trên */
+  border-radius: 15px; /* Bo tròn góc phía dưới */
+  z-index: 999; /* Đảm bảo danh sách lịch sử tìm kiếm hiển thị trên ô input */
+  max-height: 600px; /* Giới hạn chiều cao của danh sách */
+  overflow-y: auto; /* Tự động hiển thị thanh cuộn nếu danh sách quá dài */
+  max-width: 350px;
+  margin-top: 5px;
+}
+
+.search-history div {
+  padding: 4px 40px; /* Khoảng cách nội dung với lề */
+  cursor: pointer; /* Con trỏ chuột thành kiểu tay khi hover */
+}
+
+.search-history div:hover {
+  background-color: #f0f0f0; /* Màu nền khi hover */
+}
+.search-history-item {
+  display: flex;
+}
+
+.search-history-item img {
+  margin-right: 20px; /* Khoảng cách giữa biểu tượng lup và từ khóa */
+  width: 25px; /* Kích thước của biểu tượng lup */
+  height: 25px; /* Kích thước của biểu tượng lup */
+}
+.search-history-text p {
+  font-size: 11px;
+  color: #5b5b5bb8;
+  padding-left: 50px;
+}

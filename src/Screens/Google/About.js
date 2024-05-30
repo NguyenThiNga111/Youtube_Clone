@@ -1,11 +1,14 @@
-import React from "react";
-import "../App.css";
-import logo from "../images/3.jpg";
-import Is from "../images/4.jpg";
-import Iss from "../images/5.jpg";
-import Isss from "../images/6.jpg";
-import Issss from "../images/7.jpg";
-import NavigationButton from "../components/NavigationButton";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import "../styles/style_google/about.css";
+import logo from "../../images/logo_google.jpg";
+import Is from "../../images/Lup.jpg";
+import Iss from "../../images/board.jpg";
+import Isss from "../../images/search.jpg";
+import Issss from "../../images/voice.jpg";
+import NavigationButton from "../../components/NavigationButton";
+import SearchBar from "../Youtube/SearchBar";
+
 function handleLinkClick() {
   console.log("Đã click vào liên kết");
 }
@@ -15,9 +18,22 @@ function handleButtonClick() {
 }
 
 function App() {
+  const searchHistory = useSelector((state) => state.searchHistory.history);
+  const [showSearchHistory, setShowSearchHistory] = useState(false);
+
+  const handleInputClick = () => {
+    setShowSearchHistory(true);
+  };
+
+  const handleClickOutside = (event) => {
+    if (event.target.id !== "searchHistory") {
+      setShowSearchHistory(false);
+    }
+  };
+
   return (
-    <div className="App">
-     <NavigationButton/>
+    <div className="App" onClick={handleClickOutside}>
+      <NavigationButton />
       <header>
         <ul className="nav justify-content-end">
           <li className="nav-item">
@@ -39,7 +55,10 @@ function App() {
             </a>
           </li>
           <li className="nav-item">
-            <button className="nav-link-button" onClick={handleButtonClick}>
+            <button
+              className="nav-link-button"
+              onClick={handleButtonClick}
+            >
               Đăng nhập
             </button>
           </li>
@@ -59,8 +78,20 @@ function App() {
               <img src={Isss} className="iconsearch-right" />
               <img src={Issss} className="iconsearch-right" />
             </span>
-            <input type="search" id="search" />
+            <input
+              type="search"
+              id="searchHistory"
+              // value={searchHistory}
+              onClick={handleInputClick}
+            />
           </div>
+          {showSearchHistory && (
+            <ul className="search-history-list">
+              {searchHistory.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          )}
           <div className="grid-container">
             <div className="column">
               <div className="column1">
@@ -93,8 +124,9 @@ function App() {
         </body>
       </main>
       <footer>
-        <div className=""footer-top>
-          <p>Việt Nam</p><hr width="100%"/>
+        <div className="footer-top">
+          <p>Việt Nam</p>
+          <hr width="100%" />
         </div>
         <div className="footer-content">
           <div className="footer-left">

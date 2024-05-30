@@ -1,35 +1,34 @@
 import React, { useState, useEffect } from "react";
-import Home from "../images/13.jpg"; // Icon mặc định
-import HomeSelected from "../images/13.1.jpg"; // Icon khi được chọn
-import Shorts from "../images/14.jpg"; // Icon mặc định
-import ShortsSelected from "../images/14.1.jpg"; // Icon khi được chọn
-import SubscriptionChannel from "../images/15.jpg"; // Icon mặc định
-import SubscriptionChannelSelected from "../images/15.1.jpg"; // Icon khi được chọn
-import Arrow from "../images/16.jpg";
-import YourChanel from "../images/17.jpg";
-import History from "../images/18.jpg";
-import List from "../images/19.jpg";
-import Video from "../images/20.jpg";
-import Watch from "../images/21.jpg";
-import WatchSelected from "../images/21.1.jpg";
-import Like from "../images/22.jpg";
-import LikeSelected from "../images/22.1.jpg";
-import ListC from "../images/23.jpg";
-import Popular from "../images/24.jpg";
-import Music from "../images/25.jpg";
-import Game from "../images/26.jpg";
-import News from "../images/27.jpg";
-import Cup from "../images/28.jpg";
-import YtPreminium from "../images/36.jpg";
-import YtStudio from "../images/29.jpg";
-import YtMusic from "../images/30.jpg";
-import YtKids from "../images/31.jpg";
-import Setting from "../images/32.jpg";
-import Report from "../images/35.jpg";
-import Feedback from "../images/34.jpg";
-import Support from "../images/33.jpg";
-
-import "../App.css"; // Import CSS file if needed
+import Home from "../images/home.jpg"; // Icon mặc định
+import HomeSelected from "../images/home_selected.jpg"; // Icon khi được chọn
+import Shorts from "../images/shorts.jpg"; // Icon mặc định
+import ShortsSelected from "../images/subchanel.jpg"; // Icon khi được chọn
+import SubscriptionChannel from "../images/subchanel_selected.jpg"; // Icon mặc định
+import SubscriptionChannelSelected from "../images/subchanel_selected.jpg"; // Icon khi được chọn
+import Arrow from "../images/big.jpg";
+import YourChanel from "../images/yourchanel.jpg";
+import History from "../images/viewed.jpg";
+import List from "../images/list.jpg";
+import Video from "../images/yourvideo.jpg";
+import Watch from "../images/afterview.jpg";
+import WatchSelected from "../images/afterview_selected.jpg";
+import Like from "../images/like.jpg";
+import LikeSelected from "../images/like_selected.jpg";
+import ListC from "../images/allchanel.jpg";
+import Popular from "../images/popular.jpg";
+import Music from "../images/music.jpg";
+import Game from "../images/game.jpg";
+import News from "../images/news.jpg";
+import Cup from "../images/cup.jpg";
+import YtPreminium from "../images/youtube_reminium.jpg";
+import YtStudio from "../images/youtube_studio.jpg";
+import YtMusic from "../images/youtube_music.jpg";
+import YtKids from "../images/youtube_kids.jpg";
+import Setting from "../images/setting.jpg";
+import Report from "../images/report.jpg";
+import Feedback from "../images/feedback.jpg";
+import Support from "../images/support.jpg";
+import "../Screens/styles/style_youtube/ScrollableSidebar.css"; // Import CSS file if needed
 
 const ScrollableSidebar = ({ isMenuOpen }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);

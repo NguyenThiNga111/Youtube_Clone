@@ -1,0 +1,34 @@
+/* profile */
+.full-height {
+    height: 100vh; /* Set chiều cao của hàng (row) bằng 100% chiều cao của màn hình */
+  }
+  
+  .full-height .avatar-container {
+    height: 100%; /* Set chiều cao của container chứa hình ảnh bằng 100% chiều cao của hàng (row) */
+  }
+  
+  .full-height img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
+    max-height: 100%; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+  }
+  .background-container {
+    background-color: tomato;
+  }
+  .avt {
+    width: 60%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của container */
+    height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+    object-fit: cover;
+    border: 10px solid rgb(255, 135, 87);
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
+    border-radius: 50%; /* Đặt hình ảnh thành hình tròn */
+  }
+  .avatar-container {
+    text-align: center; /* Căn giữa hình ảnh trong container */
+  }
+  .navigation-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding-bottom: 50px;
+    z-index: 999; /* Đảm bảo nút hiển thị trên các phần tử khác */
+  }

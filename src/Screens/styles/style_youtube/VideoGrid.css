@@ -1,0 +1,51 @@
+.video-grid-container {
+    width: 100%;
+    padding-right: 20px; /* Để tránh việc thanh cuộn che phủ nội dung */
+  }
+  
+  /* Thiết lập kiểu dáng cho thanh cuộn */
+  .video-grid-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .video-grid-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .video-grid-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự động điều chỉnh số cột */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Đặt kích thước tối đa cho grid */
+  }
+  .video-grid-container {
+    max-height: 75vh; /* Đặt chiều cao tối đa cho thanh cuộn là 80% chiều cao của trang */
+    overflow-y: auto; /* Cho phép thanh cuộn dọc */
+  }
+  .video-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Đảm bảo spinner được căn giữa cả theo chiều dọc và ngang */
+  }
+  .loading-spinner {
+    border: 3px solid #888;
+    border-left-color: #cbcbcb;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 3s linear infinite;
+    margin-top: 20px; /* Khoảng cách phía trên spinner */
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

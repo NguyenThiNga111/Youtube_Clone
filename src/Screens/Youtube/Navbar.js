@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ArrowLeft from '../images/37.jpg'; // Icon mũi tên trái
-import ArrowRight from '../images/16.jpg'; // Icon mũi tên phải
-import '../App.css'; // Import CSS file if needed
+import ArrowLeft from '../../images/small.jpg'; // Icon mũi tên trái
+import ArrowRight from '../../images/big.jpg'; // Icon mũi tên phải
+import '../styles/style_youtube/Navbar.css'; // Import CSS file if needed
 
 const Navbar = () => {
     const navItems = [

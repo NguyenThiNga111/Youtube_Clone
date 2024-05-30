@@ -66,13 +66,10 @@
 // export default App;
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Youtube from "./YouToBe/Youtube";
-import ScrollableSidebar from "./YouToBe/ScrollableSidebar";
-import NavigationButton from "./components/NavigationButton";
+import Home from "./Screens/Introduce/Home";
+import About from "./Screens/Google/About";
+import Youtube from "./Screens/Youtube/Youtube";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 
 const App = () => {
   return (

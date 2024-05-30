@@ -1,6 +1,8 @@
+// VideoThumbnail.js
 import React from "react";
-import "../App.css";
 import moment from "moment";
+import { formatNumber } from "../../components/utils"; // Adjust the import path as needed
+import "../styles/style_youtube/VideoThumbnail.css";
 
 const VideoThumbnail = ({
   videoId,
@@ -12,23 +14,9 @@ const VideoThumbnail = ({
   channelAvatar,
 }) => {
   const handleThumbnailClick = () => {
-    // Điều hướng người dùng đến trang YouTube khi nhấp vào video
+    // Navigate the user to the YouTube page when clicking on the video
     window.location.href = `https://www.youtube.com/watch?v=${videoId}`;
   };
-
-  const formatNumber = (number) => {
-    if (typeof number === 'undefined') {
-      return '';
-    }
-    if (number >= 1_000_000_000) {
-      return (number / 1_000_000_000).toFixed(1) + "B";
-    } else if (number >= 1_000_000) {
-      return (number / 1_000_000).toFixed(1) + "M";
-    } else if (number >= 1_000) {
-      return (number / 1_000).toFixed(1) + "K";
-    }
-    return number.toString();
-  };  
 
   return (
     <a

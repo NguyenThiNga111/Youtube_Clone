@@ -1,0 +1,57 @@
+.scrollable-sidebar,
+.sidebar {
+  max-height: 88vh; /* Đặt chiều cao tối đa cho thanh cuộn là 80% chiều cao của trang */
+  overflow-y: auto; /* Cho phép thanh cuộn dọc */
+}
+.home {
+    width: 20px; /* Điều chỉnh chiều rộng theo nhu cầu */
+    height: auto; /* Duy trì tỷ lệ khung hình */
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+  }
+  
+  .selected {
+    background-color: #ecf2f4; /* Thay đổi màu nền khi được chọn */
+  }
+  
+  .selected-text {
+    font-weight: bold; /* Làm đậm chữ khi được chọn */
+    color: black; /* Thay đổi màu chữ sang màu đen khi được chọn */
+  }
+  .text {
+    margin-left: 20px; /* Khoảng cách giữa icon và chữ */
+  }
+  .text p {
+    color: #6d6d6d;
+  }
+  .text-info-view-time {
+    display: inline;
+  }
+  .bottom p {
+    color: #d1cfcf;
+  }
+  a {
+    text-decoration: none;
+  }
+  .text-info-view-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text-info-view-time p {
+    margin-left: -30px;
+    color: #5d5c5c;
+  }
+  .text-info-author p{
+    font-size: 14px;
+    color: #838383
+  }
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none; /* Loại bỏ đường viền */
+  }
+  

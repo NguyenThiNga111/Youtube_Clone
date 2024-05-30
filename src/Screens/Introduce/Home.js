@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavigationButton from "../components/NavigationButton";
-import image from "../images/1.jpg";
-import "../App.css";
+import NavigationButton from "../../components/NavigationButton";
+import image from "../../images/avatar.jpg";
+import "../styles/style_introduce/home.css";
 
 function Home() {
   const author = "NGUYEN THI NGA";
@@ -14,7 +14,6 @@ function Home() {
     "I am a 3rd year student at FPT Can Tho University and my major is software development.";
 
   return (
-    
     <div className="container-fluid">
       <div className="row full-height">
         <div className="col-lg-4 full-height p-3 text-white d-flex justify-content-center align-items-center background-container">
@@ -41,7 +40,9 @@ function Home() {
               <strong>Phone:</strong> {phone}
             </li>
           </ul>
-          <h2>Summary   <NavigationButton/></h2>
+          <h2>
+            Summary <NavigationButton />
+          </h2>
           <p>{summary}</p>
         </div>
       </div>

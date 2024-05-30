@@ -1,0 +1,137 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header-left,
+  .header-center,
+  .header-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .header-left {
+    justify-content: flex-start;
+  }
+  
+  .header-center {
+    justify-content: center;
+  }
+  
+  .header-right {
+    justify-content: flex-end;
+  }
+  
+  .Menu,
+  .LogoYt {
+    height: 40px;
+    margin-right: 30px;
+  }
+  
+  .Menu img,
+  .LogoYt img {
+    height: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .search-input-wrapper {
+    position: relative;
+    flex: 1;
+  }
+  
+  .search-input-wrapper input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline-color: #beddff;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 24px; /* Độ rộng mong muốn */
+    height: 24px; /* Chiều cao mong muốn */
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+  }
+  .search-icon img {
+    width: 100%; /* Đảm bảo hình ảnh lấp đầy không gian của thẻ <span> */
+    height: auto;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    position: relative;
+    margin-left: -5px;
+  }
+  
+  .button-icon {
+  
+    width: 24px; /* Độ rộng mong muốn */
+    height: 24px; /* Chiều cao mong muốn */
+    overflow: hidden; /* Ẩn phần vượt ra nếu có */
+  }
+  
+  .button-icon img {
+    padding-right: 20px;
+    width:50px; /* Đảm bảo hình ảnh lấp đầy không gian của thẻ <span> */
+    height:30px; /* Tự động tính toán chiều cao dựa trên tỷ lệ khung hình */
+    
+  }
+  
+  button span {
+    margin-left: 20px;
+  }
+  
+  .search-mic {
+    margin-left: 10px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .search-mic:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .search-mic img {
+    width: 20px;
+    height: auto;
+  }
+  
+  .user-profile {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile img {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 50%;
+  }

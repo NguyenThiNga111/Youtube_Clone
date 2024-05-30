@@ -1,0 +1,16 @@
+.search-history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .search-history-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-history-list li:hover {
+    background-color: #f0f0f0;
+  }
+  

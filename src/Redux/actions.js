@@ -3,7 +3,9 @@
 export const SET_SEARCH_RESULTS = "SET_SEARCH_RESULTS";
 export const SET_ERROR = "SET_ERROR";
 export const TOGGLE_MENU = "TOGGLE_MENU";
-
+export const UPDATE_SEARCH_HISTORY ="UPDATE_SEARCH_HISTORY";
+export const ADD_TO_SEARCH_HISTORY = 'ADD_TO_SEARCH_HISTORY';
+export const CLEAR_SEARCH_HISTORY = 'CLEAR_SEARCH_HISTORY';
 // Khai báo các hằng số đại diện cho các loại hành động khác nhau
 export const FETCH_VIDEOS_SUCCESS = "FETCH_VIDEOS_SUCCESS";
 export const FETCH_VIDEOS_FAILURE = "FETCH_VIDEOS_FAILURE";
@@ -11,6 +13,7 @@ export const SET_LOADING = "SET_LOADING";
 export const INCREASE_VIDEOS_TO_SHOW = "INCREASE_VIDEOS_TO_SHOW";
 export const SET_TOTAL_VIDEOS = "SET_TOTAL_VIDEOS";
 export const SET_PAGE_TOKEN = "SET_PAGE_TOKEN";
+
 export const setSearchResults = (results) => ({
   
   type: SET_SEARCH_RESULTS,
@@ -70,4 +73,18 @@ export const setPageToken = (pageToken) => ({
   type: SET_PAGE_TOKEN,
   // Dữ liệu kèm theo hành động (token của trang)
   payload: { pageToken },
+});
+
+export const addToSearchHistory = (query) => ({
+  type: ADD_TO_SEARCH_HISTORY,
+  payload: query,
+});
+
+export const clearSearchHistory = () => ({
+  type: CLEAR_SEARCH_HISTORY,
+});
+
+export const updateSearchHistory = (searchHistory) => ({
+  type: UPDATE_SEARCH_HISTORY,
+  payload: searchHistory,
 });

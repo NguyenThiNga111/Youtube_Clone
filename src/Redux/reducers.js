@@ -11,6 +11,9 @@ import {
   SET_SEARCH_RESULTS,
   SET_ERROR,
   TOGGLE_MENU,
+  ADD_TO_SEARCH_HISTORY, 
+  CLEAR_SEARCH_HISTORY,
+  UPDATE_SEARCH_HISTORY
 } from './actions';
 
 const initialState = {
@@ -18,6 +21,7 @@ const initialState = {
   error: null,
   loading: false,
   isMenuOpen: false,
+  history: [],
 };
 
 const headerReducer = (state = initialState, action) => {
@@ -38,7 +42,7 @@ const headerReducer = (state = initialState, action) => {
 const videosReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_VIDEOS_SUCCESS:
-      // Thêm các video mới vào danh sách hiện tại
+      // Kết hợp danh sách video mới với danh sách video hiện tại
       return [...state, ...action.payload.videos];
     default:
       // Trả về trạng thái hiện tại nếu hành động không được xử lý ở đây
@@ -83,7 +87,7 @@ const totalVideosReducer = (state = 0, action) => {
 };
 
 // Reducer xử lý token của trang (phân trang)
-const pageTokenReducer = (state = '', action) => {
+const pageTokenReducer = (state = null, action) => {
   switch (action.type) {
     case SET_PAGE_TOKEN:
       // Cập nhật token của trang theo payload của hành động
@@ -94,6 +98,24 @@ const pageTokenReducer = (state = '', action) => {
   }
 };
 
+const searchHistoryReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case UPDATE_SEARCH_HISTORY:
+      return {
+        ...state,
+        history: action.payload,
+      };
+    case ADD_TO_SEARCH_HISTORY:
+      // Ensure the history contains unique items and the latest query is at the beginning
+      const newHistory = [action.payload, ...state.history.filter(item => item !== action.payload)];
+      return {
+        ...state,
+        history: newHistory,
+      };
+    default:
+      return state;
+  }
+};
 // Kết hợp tất cả các reducer lại thành một reducer duy nhất
 const rootReducer = combineReducers({
   // Trạng thái danh sách video sẽ được quản lý bởi videosReducer
@@ -107,6 +129,7 @@ const rootReducer = combineReducers({
   // Token của trang sẽ được quản lý bởi pageTokenReducer
   pageToken: pageTokenReducer,
   header: headerReducer,
+  searchHistory: searchHistoryReducer,
 });
 
 // Xuất reducer gốc để sử dụng trong store của Redux

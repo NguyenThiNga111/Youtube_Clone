@@ -1,17 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import store from './YouToBe/store';
+import store from './Redux/store';
 import App from './App';
-
+import SearchBar  from './Screens/Youtube/SearchBar';
 const rootElement = document.getElementById('root');
-
-// Sử dụng ReactDOM.createRoot() để render ứng dụng
 const root = ReactDOM.createRoot(rootElement);
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
